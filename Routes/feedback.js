@@ -1,6 +1,5 @@
 const express = require("express");
 const feedback = require("../database");
-// const Mapping = require("./Operations");
 const Router = express.Router();
 
 Router.post("/Insert", (req, res) => {

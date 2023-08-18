@@ -1,6 +1,5 @@
 const express = require("express");
 const Result = require("../database");
-//const Mapping=require("./Operations");
 const Router = express.Router();
 Router.get("/", (req, res) => {
   res.send("Hello World");

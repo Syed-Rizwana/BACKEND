@@ -30,9 +30,7 @@ const Result = async (...Parameters) => {
     Details = Parameters[2];
   
     console.log(Details);
-    // if(typeof Parameters[2] === 'string') {
-    //    Details = eval(`(${Parameters[2]})`); 
-    // }
+   
     switch (Parameters[1]) {
         case "Insert":
             Sql = `insert into ${Parameters[0]} values('${Details.title}','${Details.name}','${Details.email}','${Details.yourstory}')`;
@@ -49,10 +47,7 @@ const Result = async (...Parameters) => {
         case "Read":
             Sql = `select * from ${Parameters[0]} where email='${Details}'`;
             Message = `Showing all the values in the database ${Parameters[0]}`;
-            // if(Details.wef_date){
-            //     Sql = `select * from ${Parameters[0]} where RollNumber = '${Details.wef_date}'`;
-            //     Message = `${Details.wef_date} Retrived`
-            // }
+           
         break;
         default:
         console.error("Invalid Parameters");
